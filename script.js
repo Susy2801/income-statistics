@@ -1,15 +1,3 @@
-// function formatInput(input) {
-//   // Xóa tất cả các ký tự không phải là số
-//   const cleanedValue = input.replace(/[^0-9]/g, "");
-
-//   // Chuyển đổi giá trị thành số
-//   const soTien = parseInt(cleanedValue, 10);
-
-//   const formattedValue = new Intl.NumberFormat("vi-VN").format(soTien);
-//   // Hiển thị giá trị đã định dạng
-//   return formattedValue;
-// }
-
 // Tính số ngày đi làm
 function workDaysCount() {
   var startTime = document.getElementById("start-day").value;
