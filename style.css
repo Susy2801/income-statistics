@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  color: aliceblue;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+
+.noti {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.noti h4 {
+  font-weight: 300;
+  font-size: 14px;
+  color: pink;
+}
+
+.main {
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.input-container {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 1px solid pink;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input label {
+  color: pink;
+}
+.output-container {
+  width: 500px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid pink;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.submit-box button {
+  background-color: pink;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.submit-box button:hover {
+  background-color: rgb(155, 113, 121);
+  color: aliceblue;
+}
+.output-container span {
+  color: green;
+}
