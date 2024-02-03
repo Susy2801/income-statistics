@@ -28,7 +28,6 @@
       <h4>* Ô nào không có giá trị thì điền số 0</h4>
       <h4>* Tiền phạt đi muộn mặc định là 50k</h4>
       <h4>* Ấn vào hình quyển lịch để chọn ngày cho dễ</h4>
-      <h4>* Mặc định số tiền tiết kiệm = 70% tổng thu nhập hàng tháng</h4>
     </div>
     <main class="main">
       <div class="input-container">
@@ -45,6 +44,21 @@
         <div class="input">
           <label for="loan"> Dư nợ hiện tại</label>
           <input type="text" id="loan" class="format" />
+        </div>
+
+        <div class="input">
+          <label for="target"> Mục tiêu tiết kiệm</label>
+          <input type="hidden" id="target" class="format" />
+          <select id="options">
+            <option value="99">Tự đặt mục tiêu</option>
+            <option value="1">10%</option>
+            <option value="2">20%</option>
+            <option value="3">30%</option>
+            <option value="4">40%</option>
+            <option value="5">50%</option>
+            <option value="6">60%</option>
+            <option value="7">70%</option>
+          </select>
         </div>
 
         <div class="input">
@@ -65,11 +79,16 @@
         <div>
           Số tiền trả nợ mỗi tháng: <span class="monthly-loan-pay"></span>
         </div>
-        <div>
+        <div class="hidden">
+          Tổng số tiền tích kiệm được: <span class="saved"></span>
+        </div>
+        <div class="hidden">
           Số tiền tích kiệm được mỗi tháng: <span class="monthly-saved"></span>
         </div>
 
-        <div>Tổng số tiền tích kiệm được: <span class="saved"></span></div>
+        <div class="hidden">
+          Số tiền mỗi tháng cần tiết kiệm: <span class="target-saved"></span>
+        </div>
         <div>
           Số tiền tiêu vặt mỗi tháng: <span class="monthly-revenue"></span>
         </div>

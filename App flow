@@ -2,7 +2,8 @@
 // Thu nhập: lương hàng tháng
 // Số ngày đi muộn :
 // Dư nợ hiện tại: số tiền nợ ngân hàng
-// Thời gian làm việc : ngày bắt đầu 15/2 => ngày kết thúc 30/12
+// Mục tiêu tiết kiệm:
+// Thời gian làm việc : ngày bắt đầu  => ngày kết thúc 
 
 // Dữ liệu xử lí
 // Số ngày làm việc : (ngày kết thúc - ngày bắt đầu) / (1000 * 60 * 60 * 24)
@@ -13,4 +14,5 @@
 // Số tiền nợ trả từng tháng = Dư nợ / (số ngày làm việc / 30)
 // Số tiền tích kiệm mỗi tháng = (Thu nhập - số tiền nợ trả mỗi tháng) * 70%
 // Tổng số tiền tích kiệm được = số tiền tích kiệm mỗi tháng * (số ngày đi làm / 30)
+// Số tiền tiết kiệm mỗi tháng để đạt được mục tiêu: Mục tiêu / (số ngày đi làm /30)
 // Số dư còn lại = Thu nhập - Số tiền tích kiệm mỗi tháng

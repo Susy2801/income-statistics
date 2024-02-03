@@ -1,4 +1,4 @@
-// Tính số ngày đi làm
+// ======== Tính số ngày đi làm ========
 function workDaysCount() {
   var startTime = document.getElementById("start-day").value;
   var endTime = document.getElementById("end-day").value;
@@ -9,7 +9,7 @@ function workDaysCount() {
   return workDays;
 }
 
-// Format lại số
+// ========= Format lại số ============
 var input = document.querySelectorAll(".format");
 
 input.forEach((box) => {
@@ -81,29 +81,247 @@ submitBtn.onclick = () => {
     payLoanResult
   )} vnđ`;
 
-  //In ra số tiền tích kiệm được mỗi tháng
-  var saved = document.querySelector(".monthly-saved");
-  var savedResult = Math.round(
-    (estIncomeResult / month - payLoanResult) * (70 / 100)
-  );
+  // ======! XỬ LÍ TIỀN TIẾT KIỆM !===========
+  var select = document.getElementById("options");
+  var options = parseInt(select.value);
 
-  var savedResultFormat = new Intl.NumberFormat("vi-VN").format(savedResult);
-  saved.innerText = `${savedResultFormat} vnđ`;
+  switch (options) {
+    case 99:
+      var target = document.getElementById("target");
+      var saved = document.querySelector(".monthly-saved");
+      var allSaved = document.querySelector(".saved");
+      var targetSaved = target.value;
+      // In ra số tiền cần tiết kiệm mỗi tháng
+      var targetBox = document.querySelector(".target-saved");
+      var targetResult = Math.round(targetSaved / month);
+      var targetResultFormat = new Intl.NumberFormat("vi-VN").format(
+        targetResult
+      );
+      targetBox.innerText = `${targetResultFormat} vnđ`;
 
-  // In ra tổng số tiền tích kiệm được
-  var allSaved = document.querySelector(".saved");
-  var allSavedResult = savedResult * month;
-  var allSavedResultFormat = new Intl.NumberFormat("vi-VN").format(
-    allSavedResult
-  );
-  allSaved.innerText = `${allSavedResultFormat} vnđ`;
+      //In ra số dư còn lại
+      // Số dư còn lại = Thu nhập - Số tiền tích kiệm mỗi tháng
+      var revenue = document.querySelector(".monthly-revenue");
+      var revenueResult = Math.round(income.value - targetResult);
+      var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
+        revenueResult
+      );
+      revenue.innerText = `${revenueResultFormat} vnđ`;
+      targetBox.parentElement.classList.remove("hidden");
+      saved.parentElement.classList.add("hidden");
+      allSaved.parentElement.classList.add("hidden");
+      break;
 
-  //In ra số dư còn lại
-  // Số dư còn lại = Thu nhập - Số tiền tích kiệm mỗi tháng
-  var revenue = document.querySelector(".monthly-revenue");
-  var revenueResult = Math.round(estIncomeResult / month - savedResult);
-  var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
-    revenueResult
-  );
-  revenue.innerText = `${revenueResultFormat} vnđ`;
+    case 1:
+      var target = 10 / 100;
+      //In ra số tiền tích kiệm được mỗi tháng
+      var saved = document.querySelector(".monthly-saved");
+      var savedResult = Math.round((income.value - payLoanResult) * target);
+
+      var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        savedResult
+      );
+      saved.innerText = `${savedResultFormat} vnđ`;
+
+      // In ra tổng số tiền tích kiệm được
+      var allSaved = document.querySelector(".saved");
+      var allSavedResult = savedResult * month;
+      var allSavedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        allSavedResult
+      );
+      allSaved.innerText = `${allSavedResultFormat} vnđ`;
+      //In ra số dư còn lại
+      var revenue = document.querySelector(".monthly-revenue");
+      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
+        revenueResult
+      );
+      revenue.innerText = `${revenueResultFormat} vnđ`;
+      saved.parentElement.classList.remove("hidden");
+      allSaved.parentElement.classList.remove("hidden");
+      console.log(options);
+      break;
+    case 2:
+      var target = 20 / 100;
+      //In ra số tiền tích kiệm được mỗi tháng
+      var saved = document.querySelector(".monthly-saved");
+      var savedResult = Math.round((income.value - payLoanResult) * target);
+
+      var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        savedResult
+      );
+      saved.innerText = `${savedResultFormat} vnđ`;
+
+      // In ra tổng số tiền tích kiệm được
+      var allSaved = document.querySelector(".saved");
+      var allSavedResult = savedResult * month;
+      var allSavedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        allSavedResult
+      );
+      allSaved.innerText = `${allSavedResultFormat} vnđ`;
+      //In ra số dư còn lại
+      var revenue = document.querySelector(".monthly-revenue");
+      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
+        revenueResult
+      );
+      revenue.innerText = `${revenueResultFormat} vnđ`;
+      saved.parentElement.classList.remove("hidden");
+      allSaved.parentElement.classList.remove("hidden");
+      break;
+    case 3:
+      var target = 30 / 100;
+      //In ra số tiền tích kiệm được mỗi tháng
+      var saved = document.querySelector(".monthly-saved");
+      var savedResult = Math.round((income.value - payLoanResult) * target);
+
+      var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        savedResult
+      );
+      saved.innerText = `${savedResultFormat} vnđ`;
+
+      // In ra tổng số tiền tích kiệm được
+      var allSaved = document.querySelector(".saved");
+      var allSavedResult = savedResult * month;
+      var allSavedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        allSavedResult
+      );
+      allSaved.innerText = `${allSavedResultFormat} vnđ`;
+      //In ra số dư còn lại
+      var revenue = document.querySelector(".monthly-revenue");
+      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
+        revenueResult
+      );
+      revenue.innerText = `${revenueResultFormat} vnđ`;
+      saved.parentElement.classList.remove("hidden");
+      allSaved.parentElement.classList.remove("hidden");
+      break;
+    case 4:
+      var target = 40 / 100;
+      //In ra số tiền tích kiệm được mỗi tháng
+      var saved = document.querySelector(".monthly-saved");
+      var savedResult = Math.round((income.value - payLoanResult) * target);
+
+      var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        savedResult
+      );
+      saved.innerText = `${savedResultFormat} vnđ`;
+
+      // In ra tổng số tiền tích kiệm được
+      var allSaved = document.querySelector(".saved");
+      var allSavedResult = savedResult * month;
+      var allSavedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        allSavedResult
+      );
+      allSaved.innerText = `${allSavedResultFormat} vnđ`;
+      //In ra số dư còn lại
+      var revenue = document.querySelector(".monthly-revenue");
+      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
+        revenueResult
+      );
+      revenue.innerText = `${revenueResultFormat} vnđ`;
+      saved.parentElement.classList.remove("hidden");
+      allSaved.parentElement.classList.remove("hidden");
+      break;
+    case 5:
+      var target = 50 / 100;
+      //In ra số tiền tích kiệm được mỗi tháng
+      var saved = document.querySelector(".monthly-saved");
+      var savedResult = Math.round((income.value - payLoanResult) * target);
+
+      var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        savedResult
+      );
+      saved.innerText = `${savedResultFormat} vnđ`;
+
+      // In ra tổng số tiền tích kiệm được
+      var allSaved = document.querySelector(".saved");
+      var allSavedResult = savedResult * month;
+      var allSavedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        allSavedResult
+      );
+      allSaved.innerText = `${allSavedResultFormat} vnđ`;
+      //In ra số dư còn lại
+      var revenue = document.querySelector(".monthly-revenue");
+      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
+        revenueResult
+      );
+      revenue.innerText = `${revenueResultFormat} vnđ`;
+      saved.parentElement.classList.remove("hidden");
+      allSaved.parentElement.classList.remove("hidden");
+      break;
+    case 6:
+      var target = 60 / 100;
+      //In ra số tiền tích kiệm được mỗi tháng
+      var saved = document.querySelector(".monthly-saved");
+      var savedResult = Math.round((income.value - payLoanResult) * target);
+
+      var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        savedResult
+      );
+      saved.innerText = `${savedResultFormat} vnđ`;
+
+      // In ra tổng số tiền tích kiệm được
+      var allSaved = document.querySelector(".saved");
+      var allSavedResult = savedResult * month;
+      var allSavedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        allSavedResult
+      );
+      allSaved.innerText = `${allSavedResultFormat} vnđ`;
+      //In ra số dư còn lại
+      var revenue = document.querySelector(".monthly-revenue");
+      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
+        revenueResult
+      );
+      revenue.innerText = `${revenueResultFormat} vnđ`;
+      saved.parentElement.classList.remove("hidden");
+      allSaved.parentElement.classList.remove("hidden");
+      break;
+    case 7:
+      var target = 70 / 100;
+      //In ra số tiền tích kiệm được mỗi tháng
+      var saved = document.querySelector(".monthly-saved");
+      var savedResult = Math.round((income.value - payLoanResult) * target);
+
+      var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        savedResult
+      );
+      saved.innerText = `${savedResultFormat} vnđ`;
+
+      // In ra tổng số tiền tích kiệm được
+      var allSaved = document.querySelector(".saved");
+      var allSavedResult = savedResult * month;
+      var allSavedResultFormat = new Intl.NumberFormat("vi-VN").format(
+        allSavedResult
+      );
+      allSaved.innerText = `${allSavedResultFormat} vnđ`;
+      //In ra số dư còn lại
+      var revenue = document.querySelector(".monthly-revenue");
+      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
+        revenueResult
+      );
+      revenue.innerText = `${revenueResultFormat} vnđ`;
+      saved.parentElement.classList.remove("hidden");
+      allSaved.parentElement.classList.remove("hidden");
+      break;
+    default:
+      console.log("Chịu");
+      break;
+  }
+};
+
+// XỬ LÍ CÁC OPTIONS
+var select = document.getElementById("options");
+select.value = "1";
+select.onchange = () => {
+  var target = document.getElementById("target");
+  var option = parseInt(select.value);
+  if (option === 99) {
+    target.type = "text";
+  }
 };

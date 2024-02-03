@@ -77,3 +77,7 @@ body {
 .output-container span {
   color: green;
 }
+
+.hidden {
+  display: none;
+}
