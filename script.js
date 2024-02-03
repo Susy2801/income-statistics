@@ -93,7 +93,7 @@ submitBtn.onclick = () => {
       var targetSaved = target.value;
       // In ra số tiền cần tiết kiệm mỗi tháng
       var targetBox = document.querySelector(".target-saved");
-      var targetResult = Math.round(targetSaved / month);
+      var targetResult = Math.round(targetSaved / month + payLoanResult);
       var targetResultFormat = new Intl.NumberFormat("vi-VN").format(
         targetResult
       );
