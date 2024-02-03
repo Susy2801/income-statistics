@@ -84,7 +84,7 @@ submitBtn.onclick = () => {
   // ======! XỬ LÍ TIỀN TIẾT KIỆM !===========
   var select = document.getElementById("options");
   var options = parseInt(select.value);
-
+  var targetBox = document.querySelector(".target-saved");
   switch (options) {
     case 99:
       var target = document.getElementById("target");
@@ -139,7 +139,7 @@ submitBtn.onclick = () => {
       revenue.innerText = `${revenueResultFormat} vnđ`;
       saved.parentElement.classList.remove("hidden");
       allSaved.parentElement.classList.remove("hidden");
-      console.log(options);
+      targetBox.parentElement.classList.add("hidden");
       break;
     case 2:
       var target = 20 / 100;
@@ -168,6 +168,7 @@ submitBtn.onclick = () => {
       revenue.innerText = `${revenueResultFormat} vnđ`;
       saved.parentElement.classList.remove("hidden");
       allSaved.parentElement.classList.remove("hidden");
+      targetBox.parentElement.classList.add("hidden");
       break;
     case 3:
       var target = 30 / 100;
@@ -196,6 +197,7 @@ submitBtn.onclick = () => {
       revenue.innerText = `${revenueResultFormat} vnđ`;
       saved.parentElement.classList.remove("hidden");
       allSaved.parentElement.classList.remove("hidden");
+      targetBox.parentElement.classList.add("hidden");
       break;
     case 4:
       var target = 40 / 100;
@@ -224,6 +226,7 @@ submitBtn.onclick = () => {
       revenue.innerText = `${revenueResultFormat} vnđ`;
       saved.parentElement.classList.remove("hidden");
       allSaved.parentElement.classList.remove("hidden");
+      targetBox.parentElement.classList.add("hidden");
       break;
     case 5:
       var target = 50 / 100;
@@ -252,6 +255,7 @@ submitBtn.onclick = () => {
       revenue.innerText = `${revenueResultFormat} vnđ`;
       saved.parentElement.classList.remove("hidden");
       allSaved.parentElement.classList.remove("hidden");
+      targetBox.parentElement.classList.add("hidden");
       break;
     case 6:
       var target = 60 / 100;
@@ -280,6 +284,7 @@ submitBtn.onclick = () => {
       revenue.innerText = `${revenueResultFormat} vnđ`;
       saved.parentElement.classList.remove("hidden");
       allSaved.parentElement.classList.remove("hidden");
+      targetBox.parentElement.classList.add("hidden");
       break;
     case 7:
       var target = 70 / 100;
@@ -308,6 +313,7 @@ submitBtn.onclick = () => {
       revenue.innerText = `${revenueResultFormat} vnđ`;
       saved.parentElement.classList.remove("hidden");
       allSaved.parentElement.classList.remove("hidden");
+      targetBox.parentElement.classList.add("hidden");
       break;
     default:
       console.log("Chịu");
