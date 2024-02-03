@@ -118,7 +118,9 @@ submitBtn.onclick = () => {
       var target = 10 / 100;
       //In ra số tiền tích kiệm được mỗi tháng
       var saved = document.querySelector(".monthly-saved");
-      var savedResult = Math.round((income.value - payLoanResult) * target);
+      var savedResult = Math.round(
+        (estIncomeResult / month - payLoanResult) * target
+      );
 
       var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
         savedResult
@@ -149,7 +151,9 @@ submitBtn.onclick = () => {
       var target = 20 / 100;
       //In ra số tiền tích kiệm được mỗi tháng
       var saved = document.querySelector(".monthly-saved");
-      var savedResult = Math.round((income.value - payLoanResult) * target);
+      var savedResult = Math.round(
+        (estIncomeResult / month - payLoanResult) * target
+      );
 
       var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
         savedResult
@@ -180,7 +184,9 @@ submitBtn.onclick = () => {
       var target = 30 / 100;
       //In ra số tiền tích kiệm được mỗi tháng
       var saved = document.querySelector(".monthly-saved");
-      var savedResult = Math.round((income.value - payLoanResult) * target);
+      var savedResult = Math.round(
+        (estIncomeResult / month - payLoanResult) * target
+      );
 
       var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
         savedResult
@@ -211,7 +217,9 @@ submitBtn.onclick = () => {
       var target = 40 / 100;
       //In ra số tiền tích kiệm được mỗi tháng
       var saved = document.querySelector(".monthly-saved");
-      var savedResult = Math.round((income.value - payLoanResult) * target);
+      var savedResult = Math.round(
+        (estIncomeResult / month - payLoanResult) * target
+      );
 
       var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
         savedResult
@@ -242,7 +250,9 @@ submitBtn.onclick = () => {
       var target = 50 / 100;
       //In ra số tiền tích kiệm được mỗi tháng
       var saved = document.querySelector(".monthly-saved");
-      var savedResult = Math.round((income.value - payLoanResult) * target);
+      var savedResult = Math.round(
+        (estIncomeResult / month - payLoanResult) * target
+      );
 
       var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
         savedResult
@@ -273,7 +283,9 @@ submitBtn.onclick = () => {
       var target = 60 / 100;
       //In ra số tiền tích kiệm được mỗi tháng
       var saved = document.querySelector(".monthly-saved");
-      var savedResult = Math.round((income.value - payLoanResult) * target);
+      var savedResult = Math.round(
+        (estIncomeResult / month - payLoanResult) * target
+      );
 
       var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
         savedResult
@@ -304,7 +316,9 @@ submitBtn.onclick = () => {
       var target = 70 / 100;
       //In ra số tiền tích kiệm được mỗi tháng
       var saved = document.querySelector(".monthly-saved");
-      var savedResult = Math.round((income.value - payLoanResult) * target);
+      var savedResult = Math.round(
+        (estIncomeResult / month - payLoanResult) * target
+      );
 
       var savedResultFormat = new Intl.NumberFormat("vi-VN").format(
         savedResult
