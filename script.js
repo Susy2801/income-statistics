@@ -102,7 +102,9 @@ submitBtn.onclick = () => {
       //In ra số dư còn lại
       // Số dư còn lại = Thu nhập - Số tiền tích kiệm mỗi tháng
       var revenue = document.querySelector(".monthly-revenue");
-      var revenueResult = Math.round(income.value - targetResult);
+      var revenueResult = Math.round(
+        income.value - payLoanResult - targetResult
+      );
       var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
         revenueResult
       );
@@ -132,7 +134,9 @@ submitBtn.onclick = () => {
       allSaved.innerText = `${allSavedResultFormat} vnđ`;
       //In ra số dư còn lại
       var revenue = document.querySelector(".monthly-revenue");
-      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResult = Math.round(
+        income.value - payLoanResult - savedResult
+      );
       var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
         revenueResult
       );
@@ -161,7 +165,9 @@ submitBtn.onclick = () => {
       allSaved.innerText = `${allSavedResultFormat} vnđ`;
       //In ra số dư còn lại
       var revenue = document.querySelector(".monthly-revenue");
-      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResult = Math.round(
+        income.value - payLoanResult - savedResult
+      );
       var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
         revenueResult
       );
@@ -190,7 +196,9 @@ submitBtn.onclick = () => {
       allSaved.innerText = `${allSavedResultFormat} vnđ`;
       //In ra số dư còn lại
       var revenue = document.querySelector(".monthly-revenue");
-      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResult = Math.round(
+        income.value - payLoanResult - savedResult
+      );
       var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
         revenueResult
       );
@@ -219,7 +227,9 @@ submitBtn.onclick = () => {
       allSaved.innerText = `${allSavedResultFormat} vnđ`;
       //In ra số dư còn lại
       var revenue = document.querySelector(".monthly-revenue");
-      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResult = Math.round(
+        income.value - payLoanResult - savedResult
+      );
       var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
         revenueResult
       );
@@ -248,7 +258,9 @@ submitBtn.onclick = () => {
       allSaved.innerText = `${allSavedResultFormat} vnđ`;
       //In ra số dư còn lại
       var revenue = document.querySelector(".monthly-revenue");
-      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResult = Math.round(
+        income.value - payLoanResult - savedResult
+      );
       var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
         revenueResult
       );
@@ -277,7 +289,9 @@ submitBtn.onclick = () => {
       allSaved.innerText = `${allSavedResultFormat} vnđ`;
       //In ra số dư còn lại
       var revenue = document.querySelector(".monthly-revenue");
-      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResult = Math.round(
+        income.value - payLoanResult - savedResult
+      );
       var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
         revenueResult
       );
@@ -306,7 +320,9 @@ submitBtn.onclick = () => {
       allSaved.innerText = `${allSavedResultFormat} vnđ`;
       //In ra số dư còn lại
       var revenue = document.querySelector(".monthly-revenue");
-      var revenueResult = Math.round(income.value - savedResult);
+      var revenueResult = Math.round(
+        income.value - payLoanResult - savedResult
+      );
       var revenueResultFormat = new Intl.NumberFormat("vi-VN").format(
         revenueResult
       );
