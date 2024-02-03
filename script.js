@@ -323,5 +323,7 @@ select.onchange = () => {
   var option = parseInt(select.value);
   if (option === 99) {
     target.type = "text";
+  } else {
+    target.type = "hidden";
   }
 };

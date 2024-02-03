@@ -31,7 +31,8 @@ body {
   padding: 0 50px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 50px;
 }
 
 .input-container {
@@ -52,6 +53,9 @@ body {
 
 .input label {
   color: pink;
+}
+.input input {
+  padding: 2px 7px;
 }
 .output-container {
   width: 500px;
